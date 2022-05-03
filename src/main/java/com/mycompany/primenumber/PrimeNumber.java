@@ -1,20 +1,16 @@
 
-package com.primenumber;
+package com.mycompany.primenumber;
 
 public class PrimeNumber {
 
     static boolean isPrime(int number){
-        if(number < 2){
+        if(number < 2)
             return false;
-        }
         
-        int i = 0;
-        for (int j = 1; j <= number; j++) {
-            if (number % j == 0) {
-                i++;
-            }
-        }
-        return i == 2;
+        if(number == 2)
+            return true;
+        
+        return number % 2 != 0;
     }
     
     public static void main(String[] args) {
